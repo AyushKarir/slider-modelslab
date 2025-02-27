@@ -1,0 +1,58 @@
+{
+    "models": [
+        {
+            "id": 1,
+            "name": "Flux",
+            "generationTime": "30sec",
+            "backgroundColor": "#D1E3FF",
+            "logo": "/flux-logo.svg",
+            "image": null,
+            "tags": [
+                "text-to-image",
+                "controlnet",
+                "face-generation"
+            ],
+            "buttons": [
+                "Generate",
+                "API Docs"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Flux Realtime",
+            "generationTime": "5sec",
+            "backgroundColor": "#1A1A1A",
+            "image": "/flux-realtime.jpg",
+            "tags": [
+                "text-to-image",
+                "image-to-image"
+            ],
+            "buttons": []
+        },
+        {
+            "id": 3,
+            "name": "Stable Diffusion XL",
+            "generationTime": "with loras",
+            "backgroundColor": "#791E1E",
+            "image": "/stable-diffusion-xl.jpg",
+            "tags": [
+                "text-to-image",
+                "controlnet",
+                "face-generation"
+            ],
+            "buttons": []
+        },
+        {
+            "id": 4,
+            "name": "Stable Diffusion",
+            "generationTime": "with loras",
+            "backgroundColor": "#333333",
+            "image": "/stable-diffusion.jpg",
+            "tags": [
+                "text-to-image",
+                "face-generation"
+            ],
+            "buttons": []
+        }
+    ]
+}
