@@ -15,7 +15,7 @@ const ImageModelSlider = () => {
         {
             id: 1,
             name: "Flux",
-            logo: "/flux.png",
+            logo: "/Flux.png",
             generationTime: "30sec",
             image: "/img.png",
             tags: ["text-to-image", "controlnet", "face-generation"]
@@ -24,7 +24,7 @@ const ImageModelSlider = () => {
             id: 2,
             name: "Flux Realtime",
             generationTime: "5sec",
-            logo: "/flux.png",
+            logo: "/Flux.png",
             image: "/img.png",
             tags: ["text-to-image", "image-to-image"]
         },
@@ -32,14 +32,14 @@ const ImageModelSlider = () => {
             id: 3,
             name: "Stable Diffusion",
             generationTime: "with ",
-            logo: "/flux.png",
+            logo: "/Flux.png",
             image: "/img.png",
             tags: ["text-to-image", "controlnet", "face-generation"]
         },
         {
             id: 4,
             name: "Stable Diffusion",
-            logo: "/flux.png",
+            logo: "/Flux.png",
             generationTime: "with loras",
             image: "/img.png",
             tags: ["text-to-image", "face-generation"]
