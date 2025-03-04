@@ -65,7 +65,7 @@ const ImagenPlayground = () => {
                                         <Info className="h-4 w-4 ml-1" />
                                     </TooltipTrigger>
                                     <TooltipContent>
-                                        <p>Select number of images to generate</p>
+                                        <p className='bg-white p-1'> Select number of images to generate</p>
                                     </TooltipContent>
                                 </Tooltip>
                             </TooltipProvider>
@@ -75,7 +75,7 @@ const ImagenPlayground = () => {
                                 <Button
                                     key={num}
                                     variant={numImages === num ? "default" : "outline"}
-                                    className={`rounded-lg h-8 ${numImages === num ? "bg-gray-100 text-black" : "bg-transparent border-gray-700"}`}
+                                    className={`rounded-lg cursor-pointer h-8 ${numImages === num ? "bg-gray-100 text-black" : "bg-transparent border-gray-700"}`}
                                     onClick={() => setNumImages(num)}
                                 >
                                     {num}
@@ -93,7 +93,7 @@ const ImagenPlayground = () => {
                                         <Info className="h-4 w-4 ml-1" />
                                     </TooltipTrigger>
                                     <TooltipContent>
-                                        <p>Select resolution ratio</p>
+                                        <p className='bg-white p-1'>Select resolution ratio</p>
                                     </TooltipContent>
                                 </Tooltip>
                             </TooltipProvider>
@@ -111,8 +111,8 @@ const ImagenPlayground = () => {
                                 <div
                                     key={option.value}
                                     className={`flex items-center justify-center h-8 rounded-lg cursor-pointer ${resolution === option.value
-                                            ? "bg-gray-900 border border-gray-600"
-                                            : "border border-gray-700"
+                                        ? "bg-gray-900 border border-gray-600"
+                                        : "border border-gray-700"
                                         }`}
                                     onClick={() => setResolution(option.value)}
                                 >

@@ -113,7 +113,7 @@ const ImageModelSlider = () => {
                     }}
                     breakpoints={{
                         320: { slidesPerView: 1.2, spaceBetween: 10 },
-                        640: { slidesPerView: 2.2, spaceBetween: 12 },
+                        640: { slidesPerView: 3.2, spaceBetween: 12 },
                         1024: { slidesPerView: 3.4, spaceBetween: 16, }
                     }}
                     onReachEnd={(swiper) => {
@@ -141,7 +141,7 @@ const ImageModelSlider = () => {
                                 <div className="p-6 relative z-10 h-full flex flex-col justify-between">
                                     <div>
                                         <h2 className="text-3xl md:text-4xl font-bold">{model.name}</h2>
-                                        <p className="mt-1 text-xl md:text-2xl font-medium opacity-80">Generation time {model.generationTime}</p>
+                                        <p className="mt-1 text-xl md:text-xl font-medium opacity-80">Generation time {model.generationTime}</p>
                                         <div className="flex flex-wrap gap-2 mt-4">
                                             {model.tags.map((tag, index) => (
                                                 <div key={index} className="cursor-pointer px-3 py-1 bg-white text-black text-sm rounded-md">
