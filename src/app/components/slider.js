@@ -52,11 +52,11 @@ const ImageModelSlider = () => {
     const navigationNextRef = useRef(null);
 
     return (
-        <div className="w-full text-white p-6 rounded-3xl">
-            <div className="max-w-6xl mx-auto">
-                <div className="flex justify-between items-center mb-8">
+        <div className="w-full text-white py-6 rounded-3xl">
+            <div className="max-w-full mx-auto">
+                <div className="flex p-4 justify-start items-center mb-8">
                     <h1 className="text-3xl text-black font-bold">Image Generation Models</h1>
-                    <div className="flex p-1 rounded border-2 border-[#cdcdcd]">
+                    <div className="flex ml-3 p-1 rounded border-2 border-[#cdcdcd]">
                         <button ref={navigationPrevRef} className="p-1 cursor-pointer" aria-label="Previous models">
                             <ArrowLeft className="w-6 h-6 text-black" />
                         </button>
@@ -70,6 +70,8 @@ const ImageModelSlider = () => {
                     modules={[Navigation]}
                     spaceBetween={16}
                     slidesPerView={3.2}
+                    slidesOffsetBefore={250}
+                    slidesOffsetAfter={250}
                     loop={false}
                     navigation={{
                         prevEl: navigationPrevRef.current,
