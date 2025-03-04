@@ -43,6 +43,22 @@ const ImageModelSlider = () => {
             generationTime: "with loras",
             image: "/img.png",
             tags: ["text-to-image", "face-generation"]
+        },
+        {
+            id: 5,
+            name: "Stable Diffusion",
+            logo: "/Flux.png",
+            generationTime: "with loras",
+            image: "/img.png",
+            tags: ["text-to-image", "face-generation"]
+        },
+        {
+            id: 6,
+            name: "Stable Diffusion",
+            logo: "/Flux.png",
+            generationTime: "with loras",
+            image: "/img.png",
+            tags: ["text-to-image", "face-generation"]
         }
     ];
 
@@ -85,7 +101,7 @@ const ImageModelSlider = () => {
                     spaceBetween={16}
                     slidesPerView={3.2}
                     slidesOffsetBefore={slidesOffset}
-                    slidesOffsetAfter={slidesOffset}
+                    slidesOffsetAfter={150}
                     loop={false}
                     navigation={{
                         prevEl: navigationPrevRef.current,
@@ -98,7 +114,12 @@ const ImageModelSlider = () => {
                     breakpoints={{
                         320: { slidesPerView: 1.2, spaceBetween: 10 },
                         640: { slidesPerView: 2.2, spaceBetween: 12 },
-                        1024: { slidesPerView: 2.4, spaceBetween: 16 }
+                        1024: { slidesPerView: 3.4, spaceBetween: 16, }
+                    }}
+                    onReachEnd={(swiper) => {
+                        setTimeout(() => {
+                            swiper.slideTo(0); // Instantly reset to first slide when reaching the end
+                        }, 2000); // Delay to make it feel natural
                     }}
                 >
                     {modelsData.map((model) => (
@@ -144,6 +165,9 @@ const ImageModelSlider = () => {
                             </div>
                         </SwiperSlide>
                     ))}
+                    <SwiperSlide>
+                        <div className="w-full h-64"></div>
+                    </SwiperSlide>
                 </Swiper>
             </div>
         </div >

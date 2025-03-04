@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ImageModelSlider from "./components/slider";
+import ImageModelSlider from "../components/slider";
 
 export default function Home() {
   return (
