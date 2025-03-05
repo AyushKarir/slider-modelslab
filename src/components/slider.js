@@ -67,7 +67,7 @@ const ImageModelSlider = () => {
     useEffect(() => {
         // Function to update slidesOffsetBefore based on screen width
         const updateOffset = () => {
-            setSlidesOffset(window.innerWidth > 640 ? 250 : 0);
+            setSlidesOffset(window.innerWidth > 640 ? 850 : 0);
         };
 
         updateOffset(); // Set initial value
@@ -84,7 +84,7 @@ const ImageModelSlider = () => {
     return (
         <div className="w-full text-white px-3 md:px-0 py-6 rounded-3xl">
             <div className="max-w-full mx-auto">
-                <div className="flex p-4 flex-row justify-start items-center mb-8">
+                <div className="flex p-4 flex-row justify-between items-center md:pl-32 mb-8">
                     <h1 className="text-2xl md:text-3xl text-black font-bold">Generation Models</h1>
                     <div className="flex ml-3 p-1 rounded border-2 border-[#cdcdcd]">
                         <button ref={navigationPrevRef} className="p-1 cursor-pointer" aria-label="Previous models">
@@ -99,9 +99,11 @@ const ImageModelSlider = () => {
                 <Swiper
                     modules={[Navigation]}
                     spaceBetween={16}
-                    slidesPerView={3.2}
-                    slidesOffsetBefore={slidesOffset}
-                    slidesOffsetAfter={150}
+                    // slidesPerView={3.2}
+                    slidesPerView="auto"
+                    // slidesOffsetBefore={slidesOffset}
+                    // slidesOffsetAfter={slidesOffset}
+                    className='flex justify-end'
                     loop={false}
                     navigation={{
                         prevEl: navigationPrevRef.current,
@@ -111,21 +113,21 @@ const ImageModelSlider = () => {
                         swiper.params.navigation.prevEl = navigationPrevRef.current;
                         swiper.params.navigation.nextEl = navigationNextRef.current;
                     }}
-                    breakpoints={{
-                        320: { slidesPerView: 1.2, spaceBetween: 10 },
-                        640: { slidesPerView: 3.2, spaceBetween: 12 },
-                        1024: { slidesPerView: 3.4, spaceBetween: 16, }
-                    }}
+                    // breakpoints={{
+                    //     320: { slidesPerView: 1.2, spaceBetween: 10 },
+                    //     640: { slidesPerView: 3.2, spaceBetween: 12 },
+                    //     1024: { slidesPerView: 3.4, spaceBetween: 16, }
+                    // }}
                     onReachEnd={(swiper) => {
                         setTimeout(() => {
                             swiper.slideTo(0); // Instantly reset to first slide when reaching the end
-                        }, 2000); // Delay to make it feel natural
+                        }, 1000); // Delay to make it feel natural
                     }}
                 >
                     {modelsData.map((model) => (
-                        <SwiperSlide key={model.id}>
+                        <SwiperSlide key={model.id} className="!w-92 md:pl-32"> {/* Fixed width for each slide */}
                             <div
-                                className={`h-64 rounded-xl relative overflow-hidden transition-all duration-300 ${hoveredModel === model.id ? 'bg-[#B5D1FF] text-[#005CF0]' : ''}`}
+                                className={`h-64 w-84 rounded-xl relative overflow-hidden transition-all duration-300 ${hoveredModel === model.id ? 'bg-[#B5D1FF] text-[#005CF0]' : ''}`}
                                 onMouseEnter={() => setHoveredModel(model.id)}
                                 onMouseLeave={() => setHoveredModel(null)}
                             >
@@ -166,7 +168,7 @@ const ImageModelSlider = () => {
                         </SwiperSlide>
                     ))}
                     <SwiperSlide>
-                        <div className="w-full h-64"></div>
+                        <div className="-ml-84 w-64  h-64"></div>
                     </SwiperSlide>
                 </Swiper>
             </div>
