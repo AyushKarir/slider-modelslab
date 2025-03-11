@@ -2,7 +2,7 @@ import { ChevronDown, Moon, Rocket } from "lucide-react";
 import Image from "next/image";
 export default function Navbar() {
     return (
-        <nav className=" px-4 sm:px-6 lg:px-8">
+        <nav className=" ">
             <div className="flex justify-between items-center h-16">
                 {/* Left Side - Logo */}
                 <p className="font-bold text-2xl">Models<span className="text-[#005CF0]">Lab</span> </p>
@@ -26,8 +26,8 @@ export default function Navbar() {
                         <Moon size={20} />
                     </button>
                     <button className="font-medium cursor-pointer px-4 py-2 border-[1px] border-[#d8d8d8] rounded">Login</button>
-                    <button className="font-medium flex gap-2 cursor-pointer px-4 py-2 flex items-center rounded text-white bg-[#005CF0]">
-                        Hello <Rocket size={20} />
+                    <button className="font-medium flex gap-2 cursor-pointer px-5 py-2 flex items-center rounded text-white bg-[#005CF0]">
+                        Launch App <Rocket size={20} />
                     </button>
 
                 </div>
