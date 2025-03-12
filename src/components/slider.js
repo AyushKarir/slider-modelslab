@@ -85,6 +85,7 @@ const ImageModelSlider = () => {
         <div className="w-full text-white px-3 md:px-0 py-6 rounded-3xl">
             <div className="max-w-full mx-auto">
                 <div className="flex p-4 flex-row justify-between items-center  mb-8">
+                    yoooooo
                     <h1 className="text-2xl md:text-3xl text-black font-bold">Generation Models</h1>
                     <div className="flex ml-3 p-1 rounded border-2 border-[#cdcdcd]">
                         <button ref={navigationPrevRef} className="p-1 cursor-pointer" aria-label="Previous models">
