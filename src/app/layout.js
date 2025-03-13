@@ -1,5 +1,19 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins, Geist, Geist_Mono, MuseoModerno } from "next/font/google";
 import "./globals.css";
+import Head from "next/head";
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],// Add any weights you need
+});
+
+const museoModerno = MuseoModerno({
+  subsets: ['latin'],
+  variable: '--font-museomoderno',
+  display: 'swap',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,8 +33,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+      </Head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${poppins.variable} ${geistSans.variable} ${geistMono.variable} ${museoModerno.variable} antialiased`}
+        style={{
+          fontFamily: 'var(--font-poppins), sans-serif',
+        }}
       >
         {children}
       </body>

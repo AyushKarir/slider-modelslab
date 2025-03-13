@@ -1,3 +1,4 @@
+import CompanySlider from '@/components/companiesSlider/companiesSlider'
 import Hero from '@/components/hero/hero'
 import Navbar from '@/components/navbar/navbar'
 import ImageModelSlider2 from '@/components/slider2'
@@ -15,10 +16,13 @@ const page = () => {
                 <Hero />
             </div>
 
-            <div className='max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className=''>
                 <ImageModelSlider2 />
             </div>
 
+            <div className='max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8'>
+                <CompanySlider />
+            </div>
 
         </div>
     )

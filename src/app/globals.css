@@ -1,10 +1,46 @@
 @import "tailwindcss";
+/* 
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100..900&display=swap');
 
-@plugin "tailwindcss-animate";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@plugin "tailwindcss-animate"; */
 
 @custom-variant dark (&:is(.dark *));
 
+.museoText {
+  font-family: var(--font-museomoderno), sans-serif;
+}
+
+.poppinsText {
+  font-family: var(--font-poppins), sans-serif;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap'); */
 /* Add these styles to your globals.css or create a separate CSS file */
+
+/* .museomoderno-muse {
+  font-family: "MuseoModerno", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  display: swap;
+} */
+
+
+@font-face {
+  font-family: 'Museo';
+  src: url('/fonts/MuseoModerno.ttf') format('ttf');
+  font-weight: 100 700 900;
+  /* Define the weight range for the variable font */
+  font-stretch: 50% 100%;
+  /* Optional: Define the stretch range if applicable */
+  font-style: normal;
+  /* Adjust if your font has italic styles */
+}
+
 
 /* Custom styles for Swiper navigation buttons */
 .swiper-button-next,
