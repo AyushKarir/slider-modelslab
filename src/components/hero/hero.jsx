@@ -6,7 +6,7 @@ const Hero = () => {
     return (
         <div
             className="relative bg-cover bg-center h-[500px] flex items-center text-white"
-            style={{ backgroundImage: "url('/group.png')" }}
+            style={{ backgroundImage: "url('/group.svg')" }}
         >
             <div className="md:w-[85%]">
 
