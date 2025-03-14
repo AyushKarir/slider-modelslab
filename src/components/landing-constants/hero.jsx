@@ -33,7 +33,7 @@ const Hero = () => {
                         Start Free Trial <Image cl src="play-circle.svg" height={40} width={40} className=' w-4' />
                     </button>
                     <button className="font-medium text-sm cursor-pointer bg-gray-800 hover:bg-gray-900 px-4 py-2 md:py-3 flex items-center gap-2 rounded-full">
-                        <Image cl src="basketball.svg" height={40} width={40} className=' w-4' /> Playground
+                        <Image src="basketball.svg" height={40} width={40} className=' w-4' /> Playground
                     </button>
                 </div>
             </div>
