@@ -41,15 +41,15 @@ const ImageModelSlider2 = ({ data }) => {
             <div className="max-w-full mx-auto">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex p-4 flex-row justify-between items-center mb-8">
-                        <h1 className={`text-2xl md:text-4xl ${data.titleColor ? "text-white" : "text-black"} max-w-2xl font-bold museoText `}>
-                            {data.title}
+                        <h1 className={`text-2xl md:text-4xl ${data?.titleColor ? "text-white" : "text-black"} max-w-2xl font-bold museoText `}>
+                            {data?.title || "Default Title"}
                         </h1>
-                        <div className={`${data.buttonColor ? "bg-white border-none" : ""} flex ml-3 p-1 rounded border-2 border-[#cdcdcd] `}>
+                        <div className={`${data?.buttonColor ? "bg-white border-none" : ""} flex ml-3 p-1 rounded border-2 border-[#cdcdcd] `}>
                             <button ref={navigationPrevRef} className="p-1 cursor-pointer" aria-label="Previous models">
-                                <ArrowLeft className={` ${data.buttonColor ? "text-black" : ""} text-black w-6 h-6 `} />
+                                <ArrowLeft className={` ${data?.buttonColor ? "text-black" : ""} text-black w-6 h-6 `} />
                             </button>
                             <button ref={navigationNextRef} className="p-1 cursor-pointer" aria-label="Next models">
-                                <ArrowRight className={` ${data.buttonColor ? "text-black" : ""} text-black w-6 h-6 `} />
+                                <ArrowRight className={` ${data?.buttonColor ? "text-black" : ""} text-black w-6 h-6 `} />
                             </button>
                         </div>
                     </div>
@@ -79,9 +79,9 @@ const ImageModelSlider2 = ({ data }) => {
                             }, 1000);
                         }}
                     >
-                        {data.cards.map((model) => (
+                        {data?.cards?.map((model) => (
                             <SwiperSlide key={model.id} className="!w-[350px] md:pl-32">
-                                <div className={` rounded-2xl w-84 ${model.cardColor ? model.cardColor : ""} -mr-4 `}>
+                                <div className={` rounded-2xl w-84 ${model?.cardColor ? model.cardColor : ""} -mr-4 `}>
                                     <div
                                         className="h-64 w-84 !rounded-2xl relative transition-all duration-300"
 
@@ -123,10 +123,10 @@ const ImageModelSlider2 = ({ data }) => {
 
                                     <div className="flex flex-col w-84 rounded-2xl px-4 py-2">
                                         <p className="text-black text-2xl museoText font-semibold py-1 mt-2">{model.descHead}</p>
-                                        {model.descSub && <p className="text-black/70 font-medium text py-1 leading-[1.2]">{model.descSub}</p>}
-                                        {model.track && <p className="text-black/70 font-medium text py-1 leading-[1.2]">Track : <span className="text-black">{model.track} </span> </p>}
-                                        {model.creator && <p className="text-black/70 font-medium text py-1 leading-[1.2]">Creator : <span className="text-black">{model.creator} </span> </p>}
-                                        {data.youtube && (
+                                        {model?.descSub && <p className="text-black/70 font-medium text py-1 leading-[1.2]">{model.descSub}</p>}
+                                        {model?.track && <p className="text-black/70 font-medium text py-1 leading-[1.2]">Track : <span className="text-black">{model.track} </span> </p>}
+                                        {model?.creator && <p className="text-black/70 font-medium text py-1 leading-[1.2]">Creator : <span className="text-black">{model.creator} </span> </p>}
+                                        {data?.youtube && (
                                             <>
                                                 <div className="flex gap-2">
                                                     <Image src="constants/youtube.svg" width={50} height={50} className="w-5" />
