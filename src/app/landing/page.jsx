@@ -10,6 +10,8 @@ import CopyrightMusic from '@/components/landing-constants/copyrightMusic'
 import LanguagesGrid from '@/components/landing-constants/languages'
 import DiscoverSound from '@/components/landing-constants/discoverSound'
 import PricingPlans from '@/components/plans/plans'
+import TestimonialSlider from '@/components/testimonials/testimonials'
+import FAQSection from '@/components/Accordion/accordion'
 
 const page = () => {
 
@@ -243,6 +245,39 @@ const page = () => {
             }
         ]
     };
+    const testimonialData = [
+        {
+            name: "John H.",
+            occupation: "AI/Python Enthusiast",
+            stars: 5, // 5 stars
+            avatar: "/images/avatars/john-h.png"
+        },
+        {
+            name: "John K.",
+            occupation: "Software Enthusiast",
+            stars: 5, // 5 stars
+            avatar: "/images/avatars/john-k.png"
+        },
+        {
+            name: "John H.",
+            occupation: "UX/UI Specialist",
+            stars: 5, // 5 stars
+            avatar: "/images/avatars/john-h2.png"
+        },
+        // Add more testimonials to see the slider in action
+        {
+            name: "Sarah L.",
+            occupation: "Product Designer",
+            stars: 4, // 4 stars
+            avatar: "/images/avatars/sarah-l.png"
+        },
+        {
+            name: "Mike R.",
+            occupation: "Full Stack Developer",
+            stars: 5, // 5 stars
+            avatar: "/images/avatars/mike-r.png"
+        }
+    ];
 
     const pricingData = [
         {
@@ -350,6 +385,38 @@ const page = () => {
     ];
 
 
+    const faqData = [
+        {
+            question: "What is ModelsLab?",
+            answer: "ModelsLab is an AI platform that provides tools for creating and deploying machine learning models without requiring extensive coding knowledge. Our platform is designed for researchers, data scientists, and businesses looking to leverage AI technology."
+        },
+        {
+            question: "What is ModelsLab?",
+            answer: "ModelsLab allows you to build custom AI models for image recognition, text analysis, prediction tasks, and more. Our platform provides pre-built templates and a user-friendly interface for model training and deployment."
+        },
+        {
+            question: "What is ModelsLab?",
+            answer: "ModelsLab is a comprehensive suite of AI tools and services that simplifies the machine learning workflow from data preparation to model deployment and monitoring."
+        },
+        {
+            question: "What is ModelsLab?",
+            answer: "ModelsLab is an end-to-end AI solution that helps businesses implement machine learning capabilities without requiring a specialized team of data scientists."
+        },
+        {
+            question: "What is ModelsLab?",
+            answer: "ModelsLab provides a collaborative environment for teams to work on AI projects together, sharing resources, models, and insights in a centralized workspace."
+        },
+        {
+            question: "What is ModelsLab?",
+            answer: "ModelsLab offers both ready-to-use AI models for common tasks and the ability to train custom models tailored to your specific business requirements."
+        },
+        {
+            question: "What is ModelsLab?",
+            answer: "ModelsLab is an AI platform that integrates with your existing workflows and tools, making it easier to incorporate machine learning capabilities into your products and services."
+        }
+    ];
+
+
     return (
         <div className='w-full'>
             <div className=" border-b border-[#cdcdcd]">
@@ -411,8 +478,23 @@ const page = () => {
                 <DiscoverSound />
             </div>
 
-            <div className='py-30' >
+            <div className='py-16' >
                 <PricingPlans pricingData={pricingData} />
+            </div>
+
+            <div className='py-16 max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8'>
+                <TestimonialSlider testimonials={testimonialData} />
+            </div>
+
+            <div className='py-16 max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8'>
+                <FAQSection
+                    faqItems={faqData}
+                    title="Still Have Questions?"
+                    subtitle="We have answers"
+                    emailAddress="support@modelslab.com"
+                    bookMeetingLink="/book-meeting"
+                    viewDocsLink="/documentation"
+                />
             </div>
 
 

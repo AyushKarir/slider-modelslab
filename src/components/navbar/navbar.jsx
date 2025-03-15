@@ -2,6 +2,8 @@
 import { ChevronDown, Moon, Rocket, Menu, X } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+import CustomButton from "../Button/button";
+import Button from "../Button/button";
 // import ModelsLab from "../../../public/"
 
 export default function Navbar() {
@@ -39,6 +41,7 @@ export default function Navbar() {
                             <Image src="moon.svg" height={40} width={40} className="w-6" />
                         </button>
                         <button className="font-medium cursor-pointer px-4 py-2 border-[1px] border-[#d8d8d8] rounded-lg">Login</button>
+                        {/* <Button bgcolor="white" text="Launch" textcolor="black" /> */}
                         <button className="font-medium flex gap-2 cursor-pointer px-5 py-2 flex items-center rounded-lg text-white bg-[#005CF0]">
                             Launch App <Image src="rocket.svg" height={40} width={40} className="w-4" />
                         </button>
