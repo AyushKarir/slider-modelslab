@@ -55,7 +55,7 @@ const ImageModelSlider2 = ({ data }) => {
                     </div>
                 </div>
 
-                <div className=" xl:mx-auto">
+                <div className="pl-4 sm:pl-6 lg:pl-8 xl:mx-auto">
                     <Swiper
                         modules={[Navigation]}
                         spaceBetween={16}
@@ -80,7 +80,7 @@ const ImageModelSlider2 = ({ data }) => {
                         }}
                     >
                         {data?.cards?.map((model) => (
-                            <SwiperSlide key={model.id} className="!w-[350px] md:pl-32">
+                            <SwiperSlide key={model.id} className="!w-[350px]">
                                 <div className={` rounded-2xl w-84 ${model?.cardColor ? model.cardColor : ""} -mr-4 `}>
                                     <div
                                         className="h-64 w-84 !rounded-2xl relative transition-all duration-300"

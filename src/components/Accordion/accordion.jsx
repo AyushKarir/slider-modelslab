@@ -67,7 +67,7 @@ const FAQSection = ({
                 {faqItems.map((item, index) => (
                     <div
                         key={index}
-                        className="border-b cursor-pointer border-gray-200 py-4"
+                        className="border mb-4 px-4 rounded-md cursor-pointer border-gray-200 py-4"
                     >
                         <button
                             className="flex cursor-pointer justify-between items-center w-full text-left"

@@ -61,19 +61,13 @@ const LanguagesGrid = () => {
                 {languages.map((lang) => (
                     <div
                         key={lang.name}
-                        className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow hover:shadow-md transition"
+                        className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow hover:shadow-md border border-transparent hover:border-blue-500 hover:bg-blue-100 transition cursor-pointer group"
                     >
                         <Image src="/constants/flags/india.svg" alt={lang.name} width={24} height={16} />
-                        <span className="text-sm font-medium">{lang.name}</span>
+                        <span className="text-sm font-medium group-hover:text-blue-600">{lang.name}</span>
+                        <span className="text-blue-600 opacity-0 group-hover:opacity-100 transition">↗</span>
                     </div>
                 ))}
-
-                {/* Special Button for Bangla */}
-                <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow border border-blue-500 hover:bg-blue-100 transition cursor-pointer">
-                    <Image src="constants/flags/india.svg" alt="Bangla" width={24} height={16} />
-                    <span className="text-sm font-medium text-blue-600">Bangla</span>
-                    <span className="text-blue-600">↗</span>
-                </div>
             </div>
         </div>
     );

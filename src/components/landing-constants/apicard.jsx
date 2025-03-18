@@ -17,11 +17,11 @@ const ApiFeatureCard = () => {
             </div>
 
             {/* Gradient Overlay */}
-            <div className="relative z-10  p-6 rounded-lg">
-                <div className="flex gap-8 items-center">
+            <div className="relative z-10  md:p-6 rounded-lg">
+                <div className="flex flex-col md:flex-row gap-8 items-center">
                     {/* Code Block */}
-                    <div className="bg-black/80 bg-[linear-gradient(180deg,rgba(0,32,35,0.5)_0%,rgba(0,118,131,0.5)_100%)] font-mono p-4 rounded-lg text-lg">
-                        <pre className="text-white">
+                    <div className="hidden md:inline bg-black/80 bg-[linear-gradient(180deg,rgba(0,32,35,0.5)_0%,rgba(0,118,131,0.5)_100%)] font-mono p-4 rounded-lg text-lg">
+                        <pre className="hidden md:inline text-white">
                             {`var request = require('request');
 var options = {
   method: 'POST',
@@ -37,7 +37,7 @@ var options = {
 
                     {/* Text Content */}
                     <div className="text-white space-y-4">
-                        <h2 className=" font-bold leading-tight museoText text-5xl">
+                        <h2 className=" font-bold leading-tight museoText text-4xl md:text-5xl">
                             APIs that move, scale, and adapt to your code
                         </h2>
                         <p className="text-gray-300 text-sm">

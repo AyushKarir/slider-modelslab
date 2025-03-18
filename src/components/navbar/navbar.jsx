@@ -10,7 +10,7 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="w-full ">
+        <nav className="w-full fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     {/* Left Side - Logo */}
@@ -50,7 +50,7 @@ export default function Navbar() {
 
                 {/* Mobile Menu */}
                 {isOpen && (
-                    <div className="sm:hidden flex flex-col space-y-2 py-4">
+                    <div className="sm:hidden absolute top-16 left-0 right-0 bg-white shadow-md flex flex-col space-y-2 py-4">
                         <button className="font-medium cursor-pointer px-4 py-2">Home</button>
                         <button className="font-medium cursor-pointer px-4 py-2">About</button>
                         <div className="flex justify-center">
@@ -69,10 +69,10 @@ export default function Navbar() {
                                 <Moon size={20} />
                             </button>
                         </div>
-                        <button className="font-medium cursor-pointer px-4 py-2 border-[1px] border-[#d8d8d8] rounded-lg">Login ye</button>
-                        <div className="flex justify-center w-auto">
-                            <button className="w-full justify-center font-medium flex gap-2 cursor-pointer px-5 py-2 flex items-center rounded-lg text-white bg-[#005CF0]">
-                                Launch Adsfdspp
+                        <button className="font-medium cursor-pointer px-4 py-2 border-[1px] border-[#d8d8d8] rounded-lg mx-4">Login</button>
+                        <div className="flex justify-center px-4">
+                            <button className="w-full justify-center font-medium flex gap-2 cursor-pointer px-5 py-2 items-center rounded-lg text-white bg-[#005CF0]">
+                                Launch App
                             </button>
                         </div>
                     </div>

@@ -6,7 +6,7 @@ import Link from 'next/link';
 const PluginIntegration = () => {
     return (
         <section className="bg-[#00B6D1] pt-16 text-center relative">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-4xl px-4 mx-auto">
                 {/* Icons Row */}
                 <div className="flex justify-center gap-4 mb-4">
                     <Image src="/constants/premiere.svg" alt="Premiere Pro" width={40} height={40} />
@@ -17,7 +17,7 @@ const PluginIntegration = () => {
 
                 {/* Heading & Subheading */}
                 <h2 className="text-3xl md:text-4xl font-bold text-black">One-Click Plugin Integration</h2>
-                <p className="text-lg text-black/80 mt-2">
+                <p className=" md:text-lg text-black/80 mt-2">
                     The ModelsLab plugin is now on Adobe, Sony Vegas, and DaVinci Resolve Studio
                 </p>
 
@@ -31,7 +31,7 @@ const PluginIntegration = () => {
             </div>
 
             {/* Image & Guitar Illustration */}
-            <div className="relative flex justify-center mt-8 max-w-full mx-auto">
+            <div className="px-4 relative flex justify-center mt-8 max-w-full mx-auto">
                 <Image src="/constants/code.svg" alt="Plugin UI" width={900} height={500} className="2xl:w-[1272px] w-[972px] z-10 rounded-md" />
                 <Image
                     src="/constants/guitar.svg"

@@ -112,7 +112,7 @@ const PricingSection = ({ pricingData }) => {
                     </div>
 
 
-                    <div className="text-xs bg-blue-100 text-blue-700 rounded px-2 py-1">
+                    <div className="text-xs hidden md:inline bg-blue-100 text-blue-700 rounded px-2 py-1">
                         Save up to 20%
                     </div>
                 </div>

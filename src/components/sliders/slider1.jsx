@@ -1,43 +1,38 @@
-'use client'
+'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 
-// Import Swiper styles
 import 'swiper/css';
 
 const TestimonialSlider = ({ testimonials }) => {
     const [progressWidth, setProgressWidth] = useState(0);
 
-    // Render stars based on rating
     const renderStars = (rating) => {
-        const stars = [];
-        for (let i = 0; i < 5; i++) {
-            stars.push(
-                <Image
-                    key={i}
-                    src={i < rating ? "/constants/stars/star.svg" : "/constants/spotify.svg"}
-                    alt={i < rating ? "Filled star" : "Empty star"}
-                    width={16}
-                    height={16}
-                    className="inline-block mr-1"
-                />
-            );
-        }
-        return stars;
+        return Array.from({ length: 5 }).map((_, i) => (
+            <Image
+                key={i}
+                src={i < rating ? "/constants/stars/star.svg" : "/constants/spotify.svg"}
+                alt={i < rating ? "Filled star" : "Empty star"}
+                width={16}
+                height={16}
+                className="inline-block mr-1"
+            />
+        ));
     };
 
     return (
         <div className="w-full max-w-5xl mx-auto py-12 px-4">
-            <h1 className="text-center text-3xl md:text-4xl font-bold mb-6 museoText">
-                Join 100+ users creating art using ModelsLab
+            <h1 className={`${testimonials.align === 'left' ? "text-left" : "text-center"} text-3xl md:text-4xl font-bold mb-6 museoText`}>
+                {testimonials.title}
             </h1>
 
-            <p className="text-center text-sm md:text-base text-gray-600 mb-12 max-w-2xl mx-auto">
-                Explore Our AI Image Generator Tools for Creating Captivating AI Generated Art. Explore a world of
-                infinite inspiration and take your artworks to new heights with our AI image generator tools.
-            </p>
+            {testimonials.subTitle && (
+                <p className={`${testimonials.align === 'left' ? "text-left" : "text-center"} text-sm md:text-base text-gray-600 mb-12 max-w-2xl mx-auto`}>
+                    {testimonials.subTitle}
+                </p>
+            )}
 
             <Swiper
                 modules={[Autoplay]}
@@ -60,22 +55,18 @@ const TestimonialSlider = ({ testimonials }) => {
                     },
                 }}
                 onSlideChange={(swiper) => {
-                    // Calculate progress based on current slide position
-                    const progress = (swiper.realIndex) / (testimonials.length - 1);
+                    const progress = (swiper.realIndex) / (testimonials.cards.length - 1);
                     setProgressWidth(progress * 100);
                 }}
-                onInit={(swiper) => {
-                    // Set initial progress
-                    setProgressWidth(0);
-                }}
+                onInit={() => setProgressWidth(0)}
                 className="mb-12"
             >
-                {testimonials.map((testimonial, index) => (
+                {testimonials.cards.map((testimonial, index) => (
                     <SwiperSlide key={index}>
-                        <div className="testimonial-card p-4 h-full">
+                        <div className="testimonial-card p-4 h-full border border-gray-200 rounded-lg shadow-md">
                             <div className="flex items-center mb-3">
                                 <Image
-                                    src="/constants/avatar.svg"
+                                    src="constants/avatar.svg"
                                     alt={testimonial.name}
                                     width={40}
                                     height={40}
@@ -89,9 +80,7 @@ const TestimonialSlider = ({ testimonials }) => {
                                     {renderStars(testimonial.stars)}
                                 </div>
                             </div>
-                            <p className="text-sm">
-                                <span className="font-bold">"The LLM Chat API has dramatically helped me in how I approach chat integration. It's like giving an unlimited voice to my application, making it truly engaging."</span>
-                            </p>
+                            <p className="text-sm">{testimonial.testiInfo}</p>
                         </div>
                     </SwiperSlide>
                 ))}

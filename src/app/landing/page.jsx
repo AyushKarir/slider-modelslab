@@ -2,7 +2,7 @@ import CompanySlider from '@/components/companiesSlider/companiesSlider'
 import PluginIntegration from '@/components/landing-constants/pluginIntergration'
 import Hero from '@/components/landing-constants/hero'
 import Navbar from '@/components/navbar/navbar'
-import ImageModelSlider2 from '@/components/slider2'
+import ImageModelSlider2 from '@/components/sliders/slider2'
 import React from 'react'
 import APIIntegrationCard from '@/components/landing-constants/apicard'
 import Image from 'next/image'
@@ -10,8 +10,9 @@ import CopyrightMusic from '@/components/landing-constants/copyrightMusic'
 import LanguagesGrid from '@/components/landing-constants/languages'
 import DiscoverSound from '@/components/landing-constants/discoverSound'
 import PricingPlans from '@/components/plans/plans'
-import TestimonialSlider from '@/components/testimonials/testimonials'
+import TestimonialSlider from '@/components/sliders/slider1'
 import FAQSection from '@/components/Accordion/accordion'
+import Slider3 from '@/components/sliders/slider3'
 
 const page = () => {
 
@@ -245,39 +246,92 @@ const page = () => {
             }
         ]
     };
-    const testimonialData = [
-        {
-            name: "John H.",
-            occupation: "AI/Python Enthusiast",
-            stars: 5, // 5 stars
-            avatar: "/images/avatars/john-h.png"
-        },
-        {
-            name: "John K.",
-            occupation: "Software Enthusiast",
-            stars: 5, // 5 stars
-            avatar: "/images/avatars/john-k.png"
-        },
-        {
-            name: "John H.",
-            occupation: "UX/UI Specialist",
-            stars: 5, // 5 stars
-            avatar: "/images/avatars/john-h2.png"
-        },
-        // Add more testimonials to see the slider in action
-        {
-            name: "Sarah L.",
-            occupation: "Product Designer",
-            stars: 4, // 4 stars
-            avatar: "/images/avatars/sarah-l.png"
-        },
-        {
-            name: "Mike R.",
-            occupation: "Full Stack Developer",
-            stars: 5, // 5 stars
-            avatar: "/images/avatars/mike-r.png"
-        }
-    ];
+    const testimonialData = {
+        title: "Join 1M+ users creating art using ModelsLab",
+        subTitle: "Explore Our AI Image Generator Tools for Creating Captivating AI Generated Art. Explore a world of infinite inspiration and take your artworks to new heights with our AI image generator tools.",
+        align: "center",
+        cards: [
+            {
+                name: "John H.",
+                occupation: "AI/Python Enthusiast",
+                stars: 5, // 5 stars
+                avatar: "/images/avatars/john-h.png",
+                testiInfo: "  Explore Our AI Image Generator Tools for Creating Captivating AI Generated Art. Explore a world of infinite inspiration and take your artworks to new heights with our AI image generator tools."
+            },
+            {
+                name: "John K.",
+                occupation: "Software Enthusiast",
+                stars: 5, // 5 stars
+                avatar: "/images/avatars/john-k.png",
+                testiInfo: "  Explore Our AI Image Generator Tools for Creating Captivating AI Generated Art. Explore a world of infinite inspiration and take your artworks to new heights with our AI image generator tools."
+            },
+            {
+                name: "John H.",
+                occupation: "UX/UI Specialist",
+                stars: 5, // 5 stars
+                avatar: "/images/avatars/john-h2.png",
+                testiInfo: "  Explore Our AI Image Generator Tools for Creating Captivating AI Generated Art. Explore a world of infinite inspiration and take your artworks to new heights with our AI image generator tools."
+            },
+            // Add more testimonials to see the slider in action
+            {
+                name: "Sarah L.",
+                occupation: "Product Designer",
+                stars: 4, // 4 stars
+                avatar: "/images/avatars/sarah-l.png",
+                testiInfo: "  Explore Our AI Image Generator Tools for Creating Captivating AI Generated Art. Explore a world of infinite inspiration and take your artworks to new heights with our AI image generator tools."
+            },
+            {
+                name: "Mike R.",
+                occupation: "Full Stack Developer",
+                stars: 5, // 5 stars
+                avatar: "/images/avatars/mike-r.png",
+                testiInfo: "  Explore Our AI Image Generator Tools for Creating Captivating AI Generated Art. Explore a world of infinite inspiration and take your artworks to new heights with our AI image generator tools."
+            }
+        ]
+    };
+    const lastSliderData = {
+        title: "Explore Our Other Solutions",
+        subTitle: "ModelsLab offers complete creative business solutions to enterprises that want to advance, build apps, and scale up. Here are reasons why you’ll love us:",
+        align: "left",
+        cards: [
+            {
+                name: "John H.",
+                occupation: "AI/Python Enthusiast",
+                stars: 5, // 5 stars
+                avatar: "/images/avatars/john-h.png",
+                testiInfo: "  Explore Our AI Image Generator Tools for Creating Captivating AI Generated Art. Explore a world of infinite inspiration and take your artworks to new heights with our AI image generator tools."
+            },
+            {
+                name: "John K.",
+                occupation: "Software Enthusiast",
+                stars: 5, // 5 stars
+                avatar: "/images/avatars/john-k.png",
+                testiInfo: "  Explore Our AI Image Generator Tools for Creating Captivating AI Generated Art. Explore a world of infinite inspiration and take your artworks to new heights with our AI image generator tools."
+            },
+            {
+                name: "John H.",
+                occupation: "UX/UI Specialist",
+                stars: 5, // 5 stars
+                avatar: "/images/avatars/john-h2.png",
+                testiInfo: "  Explore Our AI Image Generator Tools for Creating Captivating AI Generated Art. Explore a world of infinite inspiration and take your artworks to new heights with our AI image generator tools."
+            },
+            // Add more testimonials to see the slider in action
+            {
+                name: "Sarah L.",
+                occupation: "Product Designer",
+                stars: 4, // 4 stars
+                avatar: "/images/avatars/sarah-l.png",
+                testiInfo: "  Explore Our AI Image Generator Tools for Creating Captivating AI Generated Art. Explore a world of infinite inspiration and take your artworks to new heights with our AI image generator tools."
+            },
+            {
+                name: "Mike R.",
+                occupation: "Full Stack Developer",
+                stars: 5, // 5 stars
+                avatar: "/images/avatars/mike-r.png",
+                testiInfo: "  Explore Our AI Image Generator Tools for Creating Captivating AI Generated Art. Explore a world of infinite inspiration and take your artworks to new heights with our AI image generator tools."
+            }
+        ]
+    };
 
     const pricingData = [
         {
@@ -446,12 +500,12 @@ const page = () => {
                 <PluginIntegration />
             </div>
 
-            <div className='p-28'>
+            <div className='p-10 md:p-28'>
                 <APIIntegrationCard />
             </div>
 
 
-            <div className='relative py-30 bg-[#121919]'>
+            <div className='relative py-30 bg-[#121919] px-4'>
                 <div className="absolute inset-0">
                     <Image
                         src="/constants/slider3bg.svg"
@@ -461,24 +515,24 @@ const page = () => {
                         className="z-0"
                     />
                 </div>
-                <div className="relative z-10">
+                <div className="relative z-10 px-4">
                     <ImageModelSlider2 data={slider3Data} />
                 </div>
             </div>
 
-            <div className='pt-20 bg-[#F9E813]' >
+            <div className='pt-20 px-4 bg-[#F9E813]' >
                 <CopyrightMusic />
             </div>
 
-            <div className='py-30' >
+            <div className='py-30 px-4' >
                 <LanguagesGrid />
             </div>
 
-            <div className='' >
+            <div className='px-4' >
                 <DiscoverSound />
             </div>
 
-            <div className='py-16' >
+            <div className='py-16 px-4' >
                 <PricingPlans pricingData={pricingData} />
             </div>
 
@@ -497,6 +551,9 @@ const page = () => {
                 />
             </div>
 
+            <div className='py-16 max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8'>
+                <Slider3 testimonials={lastSliderData} />
+            </div>
 
 
         </div>
