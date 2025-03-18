@@ -13,6 +13,7 @@ import PricingPlans from '@/components/plans/plans'
 import TestimonialSlider from '@/components/sliders/slider1'
 import FAQSection from '@/components/Accordion/accordion'
 import Slider3 from '@/components/sliders/slider3'
+import Footer from '@/components/Footer/footer'
 
 const page = () => {
 
@@ -469,6 +470,41 @@ const page = () => {
             answer: "ModelsLab is an AI platform that integrates with your existing workflows and tools, making it easier to incorporate machine learning capabilities into your products and services."
         }
     ];
+    const footerData = {
+        productLinks: [
+            { label: 'Imagen', url: '/imagen' },
+            { label: 'Video Fusion', url: '/video-fusion' },
+            { label: '3D Verse', url: '/3d-verse' },
+            { label: 'AudioGen', url: '/audiogen' },
+            { label: 'Auto AI', url: '/auto-ai' },
+            { label: 'LLMaster', url: '/llmaster' },
+        ],
+        resourceLinks: [
+            { label: 'Marketplace', url: '/marketplace' },
+            { label: 'Playground', url: '/playground' },
+            { label: 'Live Server', url: '/live-server' },
+            { label: 'Enterprise', url: '/enterprise' },
+            { label: 'Documentation', url: '/docs' },
+            { label: 'Create Ticket', url: '/support/ticket' },
+        ],
+        aboutLinks: [
+            { label: 'Support', url: '/support' },
+            { label: 'Pricing', url: '/pricing' },
+            { label: 'Blog', url: '/blog' },
+            { label: 'Changelog', url: '/changelog' },
+            { label: 'FAQ', url: '/faq' },
+            { label: 'Changelog', url: '/changelog' }, // Duplicated as in your image
+        ],
+        socialLinks: [
+            { label: 'YouTube', icon: '/constants/youtube.svg', url: 'https://youtube.com' },
+            { label: 'Facebook', icon: '/constants/facebook.svg', url: 'https://facebook.com' },
+        ],
+        legalLinks: [
+            { label: 'Terms of Use', url: '/terms' },
+            { label: 'Refund Policy', url: '/refund' },
+            { label: 'Privacy Policy', url: '/privacy' },
+        ]
+    };
 
 
     return (
@@ -553,6 +589,10 @@ const page = () => {
 
             <div className='py-16 max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8'>
                 <Slider3 testimonials={lastSliderData} />
+            </div>
+
+            <div className='py-16 max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8'>
+                <Footer footerData={footerData} />
             </div>
 
 
